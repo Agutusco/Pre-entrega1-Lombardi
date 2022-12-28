@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo img{
+    width: 50px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    background-color: aqua;
+    list-style: none;
+    text-decoration: none;
+    height: 100px;
+}
+.nav-principal ul{
+    display: flex;
+    align-items: center;
+}
+.nav-principal li{
+    margin-right: 1.5rem;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+}
+.nav-principal li a{
+    text-decoration: none;
+    color: black;
+}
+/* Empieza nosotros */
+#nosotros{
+    background: white;
+    padding: 60px 0;
+}
+#nosotros .nosotros-extra{
+    padding-top: 60px;
+}
+#nosotros .nosotros-extra h4{
+    font-weight: 400;
+    font-size: 25px;
+    color: #0a0a0a;
+    font-family: "Montserrat", sans-serif;
+}
+/* Termina nosotros */
+
+/* Empieza tienda */
+#tiendavideojuegos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3em 3em;
+    justify-content: center;
+    align-self: center;
+}
+#tiendavideojuegos h2{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 3px;
+    background-color: aqua;
+}
+#tiendavideojuegos p{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+#tiendavideojuegos .contenido{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5em;
+    width: 100%;
+    justify-items: center;
+}
+/* Termina tienda */
+
+/* Empieza Contacto */
+#contact{
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 60px 0;
+    overflow: hidden;
+}
+#contact .form input,
+#contact .form textarea{
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+#contact h3{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    background-color: aqua;
+    height: 40px;
+}
+#contact .form input{
+    width: 100%;
+    background: none;
+    color: gray;
+    font-size: 1rem;
+    padding: 0.6em 0.3rem;
+}
+/* Termina Contacto */
+
+/* Empieza footer */
+#footer{
+    background: aqua;
+    padding: 0 0 30px 0;
+    color: black;
+    font-size: 14px;
+}
+#footer .footer-top{
+    background: aqua;
+    padding: 60px 0 30px 0;
+}
+#footer .footer-top .footer-info{
+    margin-bottom: 30px;
+}
+#footer .footer-top .footer-info h3{
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+#footer .footer-top .footer-info p{
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+}
+#footer .footer-top h4{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+#footer .footer-top .footer-contact{
+    margin-bottom: 30px;
+}
+#footer .footer-top .footer-contact p{
+    line-height: 26px;
+}
+#footer .footer-top .footer-comunidad{
+    margin-bottom: 30px;
+}
+#footer .footer-top .footer-comunidad input [type="email"]{
+    border: 0;
+    padding: 6px 8px;
+    width: 50%;
+    height: 44px;
+}
+#footer .footer-top .footer-comunidad input [type="submit"]{
+    background: aqua;
+    border: solid white 1.5px;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding-left: 12px;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    height: 44px;
+}
+#footer .footer-top .footer-comunidad input [type="submit"]:hover {
+    color: black;
+    background: #fff;
+}
+#footer .copyright{
+    text-align: center;
+    padding-top: 30px;
+}
+/* Termina footer */
+
+/* Inicia espera */
+.title-espera{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.subtitle-espera{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.img-espera{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.button-espera{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
