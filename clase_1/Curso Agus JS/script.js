@@ -19,22 +19,42 @@
 // let cantidadproducto7
 // let cantidadproducto8
 // let cantidadproducto9
+
+// Carrito
+const preciototal = document.getElementById("preciototal")
+
+let carrito1 = []
+
 const tiendadevidejuegos = document.getElementById("tiendavideojuegos")
 stockproductos.forEach((producto) => {
     const div = document.createElement("div")
     div.innerHTML = `
     <div class="contenido">
     <div class="card border-info mb-3" style="width: 18rem;">
-    <img src="${producto.img}" class="card-img-top" alt="...">
-    <div class="card-body">
+    <img src="${producto.img}" class="card-img-top" alt="">
+    <div class="card-body"> 
     <h5 class="card-title">${producto.nombre}</h5>
     <p class="card-text">${producto.desc}<br> <strong>${producto.precio}$</strong></p>
-    <a href="" class="btn btn-primary">Agregar al carrito</a>
+    <button id="agregar${producto.id}" class="btn btn-primary">Agregar al carrito</button>
     </div>
     </div>
     `
     tiendadevidejuegos.appendChild(div)
+
+    const boton = document.getElementById(`agregar${producto.id}`)
+
+    boton.addEventListener("click", () => {
+        agregaralcarrito(producto.id)
+    })
 })
+
+const agregaralcarrito = (prodId) =>{
+    const item1 = stockproductos.find((prod) => prod.id === prodId)
+    carrito1.push(item1)
+    console.log(carrito1)
+}
+
+let carrito2 = []
 
 const tiendadeconsolas = document.getElementById("tiendadecontroles")
 stockconsolas.forEach((producto) => {
@@ -42,7 +62,7 @@ stockconsolas.forEach((producto) => {
     div.innerHTML = `
     <div class="contenido">
     <div class="card border-info mb-3" style="width: 18rem;">
-    <img src="${producto.img}" class="card-img-top" alt="...">
+    <img src="${producto.img}" class="card-img-top" alt="">
     <div class="card-body">
     <h5 class="card-title">${producto.nombre}</h5>
     <p class="card-text">${producto.desc}</p>
@@ -50,16 +70,98 @@ stockconsolas.forEach((producto) => {
     <ul class="list-group list-group-flush">
     <li class="list-group-item">${producto.desc2}</li>
     <li class="list-group-item">${producto.desc3}</li>
-    <li class="list-group-item"><strong>${producto.precio}</strong></li>
+    <li class="list-group-item"><strong>${producto.precio}$</strong></li>
     </ul>
     <div class="card-body">
-    <a href="" class="btn btn-secondary" id="BtnCarrito">Agregar al carrito</a>
+    <button class="btn btn-secondary" id="agregar${producto.id}">Agregar al carrito</button>
     </div>
-</div>
 </div>
     `
     tiendadeconsolas.appendChild(div)
+
+    const boton1 = document.getElementById(`agregar${producto.id}`)
+
+    boton1.addEventListener("click", () => {
+        agregaralcarrito1(producto.id)
+    })
 })
+
+
+const agregaralcarrito1 = (prodId) =>{
+    const item2 = stockproductos.find((prod) => prod.id === prodId)
+    carrito2.push(item2)
+    console.log(carrito2)
+}
+
+
+
+// Formulario finalizar compra
+// let productosfinalizarcompra = (producto,donde) =>{
+//     let foto = producto.nombre.replaceAll(' ', '_')   
+//     let precio = parseInt(producto.precio)
+//     let productodiv = $(`
+//     <div class="producto_finalizarcompra">
+//     <img> src="./assets/${foto}.jpg alt="">
+//     <p>${producto.nombre}</p>
+//     <p>${precio}</p>
+//     </div>
+//     <hr>
+//     `
+//     )
+//     donde.prepend(productodiv)
+// }
+
+const total = document.getElementsByClassName("total")
+const p = document.createElement("p")
+preciototal.innerText = 
+`
+<p>Total: ${carrito1}</p>
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // // Cuantos productos quiere llevarse
